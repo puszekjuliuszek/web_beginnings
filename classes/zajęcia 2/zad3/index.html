@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 50px;
+            font-weight: bold;
+        }
+        input{
+            padding: 20px;
+        }
+    </style>
+    <script>
+
+        //Obiekty
+        let obiekt = {wartosc1:"coś", wartosc2: "cos2"}
+        let osoba = {
+            imie: "Szymon",
+            wiek: 21
+        }
+        osoba.studia = "AGH",
+        console.log(osoba)
+
+        let coscos = eval("50+50")
+        console.log(coscos)
+
+        function loaded(){
+            console.log("załadoało strone")
+
+            let bt = document.getElementById("bt")
+            // bt.addEventListener("click", clicked)
+            bt.addEventListener("click", (event) => {
+                alert("Wciśnięto w  X:" + event.clientX)
+            })
+        }
+            
+        function clicked(){
+            console.log("wcisnietoprzycisk")
+            let inpucik = document.getElementById("inpucik")
+            let wiek = prompt("daj wiek")
+            alert(inpucik.value + " masz " + wiek + " lat")
+        }
+    </script>
+</head>
+<body onload="loaded()">
+    <input type="text" placeholder="Wpisz imie" id="inpucik">
+    <br>
+    <button onclick="clicked()">zapytaj o wiek</button>
+    <button id="bt">test</button>
+</body>
+</html>
