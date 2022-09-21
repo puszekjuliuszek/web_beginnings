@@ -1,0 +1,39 @@
+#inputWrapper{
+  height: 1%;
+  margin: auto;
+  width: 35%;
+}
+input{
+  font-size: 200%;
+    padding: 1%;
+    width: 98%;
+    margin: auto;
+}
+.container {
+    font-family: arial;
+    margin: auto;
+    width: 35%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .child {
+    float: left;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+  }
+button{
+  width: 25%;
+  height: 100%;
+  font-size: 200%;
+  border-radius: 30%;
+}
+#output{
+  display: block;
+  padding-left: 5%;
+  padding-top: 5%;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klakulator prosty</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="loaded()">
+    <div id = "inputWrapper">
+        <input type="text" placeholder="Wpisz wyrażenie do obliczenia" id="expression">
+    </div>
+    <br>
+    <div class="container">
+        <div class="child">
+            <button onclick="clicked(7)">7</button>
+            <button onclick="clicked(8)">8</button>
+            <button onclick="clicked(9)">9</button>
+            <button onclick="clicked(10)">/</button>
+        </div>
+        <div class="child">
+            <button onclick="clicked(4)">4</button>
+            <button onclick="clicked(5)">5</button>
+            <button onclick="clicked(6)">6</button>
+            <button onclick="clicked(11)">*</button>
+        </div>
+        <div class="child">
+            <button onclick="clicked(1)">1</button>
+            <button onclick="clicked(2)">2</button>
+            <button onclick="clicked(3)">3</button>
+            <button onclick="clicked(12)">-</button>
+        </div>
+        <div class="child">
+            <button onclick="clicked(0)">0</button>
+            <button onclick="clicked(14)">.</button>
+            <button onclick="clickedEqual()">=</button>
+            <button onclick="clicked(13)">+</button>
+        </div>
+    </div>
+    <div class="container" id="output"></div>
+      
+</body>
+</html>
