@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            display: flex;
+        }
+        .boxy{
+            width: 100px;
+            height: 100px;
+            border: 5px solid red;
+        }
+    </style>
+    <script>
+        let liczba = 10
+        function przywitaj(){
+            alert("Hejka")
+        }
+        function clicked(){
+            setTimeout(przywitaj,3000)
+        }
+        function clicked2(){
+            let divek = document.getElementById("divek")
+            let licznik = setInterval(() => {
+                divek.innerText = liczba
+                liczba -=1
+                if(liczba == -1){
+                    clearInterval(licznik)
+                }
+            },200)
+        }
+        function loaded(){
+            let box = document.getElementById("box")
+            let boxInside1 = document.createElement("div")
+            let boxInside2 = document.createElement("div")
+            let boxInside3 = document.createElement("div")
+            boxInside1.classList.add("boxy")
+            boxInside2.classList.add("boxy")
+            boxInside3.classList.add("boxy")
+            box.appendChild(boxInside1)
+            box.appendChild(boxInside2)
+            box.appendChild(boxInside3)
+        }
+    </script>
+</head>
+<body onload="loaded()">
+    <button onclick="clicked()">przywitaj się za 3 sekundy</button>
+    <div id="divek">10</div> <br>
+    <button onclick="clicked2()">zacznij odliczanie</button>
+    <div id="box"></div>
+</body>
+</html>

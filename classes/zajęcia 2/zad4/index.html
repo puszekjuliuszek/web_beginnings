@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #divek{
+            background-color: magenta;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        let margin = 0
+        let loaded = () =>{
+            console.log("dzień dobry")
+            document.addEventListener("keydown", (event)=>{
+                if (event.code == "ArrowRight"){
+                    margin += 10
+                } else if (event.code == "ArrowLeft"){
+                    margin -= 10
+                }
+                divek.style.marginLeft = margin + "px"
+            })
+        }
+    </script>
+</head>
+<body onload="loaded()">
+    <div id="divek"></div>
+</body>
+</html>
