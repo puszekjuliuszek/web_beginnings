@@ -1,0 +1,19 @@
+#desc{
+    padding: 0.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#addbutton{
+    width: 8%;
+    height: 80px;
+}
+#container{
+    width: 100%;
+}
+.square{
+    float: left;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 0px;
+}
